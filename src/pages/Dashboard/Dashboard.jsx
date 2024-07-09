@@ -9,7 +9,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchAttendees = async () => {
       try {
-        const response = await axios.get('http://localhost:5005/api/attendees'); // Adjust the endpoint based on your API
+        const response = await axios.get('https://gracebkend.onrender.com/api/attendees'); // Adjust the endpoint based on your API
         setAttendees(response.data.attendees); // Assuming response.data contains an array of attendees
       } catch (error) {
         console.error('Error fetching attendees:', error);

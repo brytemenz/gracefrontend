@@ -25,7 +25,7 @@ const RegisterAttendee = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5005/api/register', formData);
+      const response = await axios.post('https://gracebkend.onrender.com/api/register', formData);
       setMessage(response.data.message);
       setShowModal(true);
     } catch (error) {

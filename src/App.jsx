@@ -40,14 +40,14 @@ function App() {
           }
         />  
 
-        <Route
+        {/* <Route
           path="/signup"
           element={
             <IsAnon>
               <SignupPage />
             </IsAnon>
           }
-        />
+        /> */}
         <Route
           path="/login"
           element={
