@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { useContext } from "react";
 
 import HomePage from "./pages/HomePage/HomePage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
@@ -11,15 +12,18 @@ import IsPrivate from "./components/IsPrivate/IsPrivate";
 import IsAnon from "./components/IsAnon/IsAnon";
 import RegisterAttendee from "./pages/Attendee/RegisterAttendee";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import { AuthContext } from "./context/auth.context";
 
 function App() {
+  const { isLoggedIn } = useContext(AuthContext);
+
   return (
     <div className="App">
-      {<IsPrivate><Navbar /></IsPrivate>}
+      {isLoggedIn && <Navbar />}
 
       <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/register" element={<RegisterAttendee />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<RegisterAttendee />} />
 
         <Route
           path="/profile"
@@ -29,17 +33,14 @@ function App() {
             </IsPrivate>
           }
         />
-
-
-      <Route
+        <Route
           path="/dashboard"
           element={
             <IsPrivate>
               <Dashboard />
             </IsPrivate>
           }
-        />  
-
+        />
         {/* <Route
           path="/signup"
           element={

@@ -84,12 +84,7 @@ function LoginPage() {
           <p className="text-red-500 mt-4 text-center">{errorMessage}</p>
         )}
 
-        <p className="mt-6 text-center text-gray-600">
-          Don't have an account?{" "}
-          <Link to="/signup" className="text-purple-700 hover:text-purple-900">
-            Sign Up
-          </Link>
-        </p>
+        
       </div>
     </div>
   );
