@@ -14,6 +14,7 @@ const RegisterAttendee = () => {
 
   const [message, setMessage] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [loading, setLoading] = useState(false); // State to manage loading state
 
   const handleChange = (e) => {
     setFormData({
@@ -24,6 +25,7 @@ const RegisterAttendee = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading state to true during registration process
     try {
       const response = await axios.post('https://gracebkend.onrender.com/api/register', formData);
       setMessage(response.data.message);
@@ -31,6 +33,8 @@ const RegisterAttendee = () => {
     } catch (error) {
       console.error("Registration error:", error.response ? error.response.data : error.message);
       setMessage('Registration failed. Please try again.');
+    } finally {
+      setLoading(false); // Reset loading state after registration attempt
     }
   };
 
@@ -113,9 +117,10 @@ const RegisterAttendee = () => {
           <div className="mb-6">
             <button
               type="submit"
-              className="w-full bg-purple-950 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className={`w-full bg-purple-950 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+              disabled={loading} // Disable button while loading
             >
-              Register
+              {loading ? 'Registering...' : 'Register'}
             </button>
           </div>
         </form>
