@@ -32,10 +32,10 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center" style={{ backgroundImage: 'url(https://cdn.pixabay.com/photo/2016/11/29/07/06/bleachers-1867992_1280.jpg)' }}>
+    <div className="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center" style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/view-soccer-field-with-grass_23-2150887312.jpg?t=st=1720550052~exp=1720553652~hmac=e5fef99d0636c3e8a8f1f0eec771fc03e379832badb5f95bd15a279c93e1ff4f&w=2000)' }}>
       <div className="absolute inset-0 bg-black opacity-60"></div>
       <div className="relative z-10 flex flex-col items-center text-center text-white p-6">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">Welcome to the Field of Grace Event</h1>
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">Welcome to the  <span className="  text-white font-bold py-3 px-8 rounded-full shadow-lg bg-purple-600">Field of Grace</span> Event</h1>
         <p className="text-lg md:text-2xl mb-8">Join us for an unforgettable experience. Register now to participate!</p>
         <button
           onClick={handleRegisterClick}
@@ -46,19 +46,19 @@ function HomePage() {
 
         {countdown.days > 0 && (
           <div className="flex flex-col md:flex-row items-center justify-center mt-8 space-y-4 md:space-y-0 md:space-x-8">
-            <div className="bg-gray-800 bg-opacity-60 rounded-lg p-4 text-center">
+            <div className="bg-purple-800 bg-opacity-60 rounded-lg p-4 text-center">
               <div className="text-2xl md:text-3xl text-white font-semibold mb-2">Days</div>
               <div className="text-4xl md:text-6xl text-white font-bold">{countdown.days}</div>
             </div>
-            <div className="bg-gray-800 bg-opacity-60 rounded-lg p-4 text-center">
+            <div className="bg-purple-800 bg-opacity-60 rounded-lg p-4 text-center">
               <div className="text-2xl md:text-3xl text-white font-semibold mb-2">Hours</div>
               <div className="text-4xl md:text-6xl text-white font-bold">{countdown.hours}</div>
             </div>
-            <div className="bg-gray-800 bg-opacity-60 rounded-lg p-4 text-center">
+            <div className="bg-purple-800 bg-opacity-60 rounded-lg p-4 text-center">
               <div className="text-2xl md:text-3xl text-white font-semibold mb-2">Minutes</div>
               <div className="text-4xl md:text-6xl text-white font-bold">{countdown.minutes}</div>
             </div>
-            <div className="bg-gray-800 bg-opacity-60 rounded-lg p-4 text-center">
+            <div className="bg-purple-800 bg-opacity-60 rounded-lg p-4 text-center">
               <div className="text-2xl md:text-3xl text-white font-semibold mb-2">Seconds</div>
               <div className="text-4xl md:text-6xl text-white font-bold">{countdown.seconds}</div>
             </div>
