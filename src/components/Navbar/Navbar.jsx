@@ -20,15 +20,15 @@ function Navbar() {
                 to="/dashboard"
                 className="text-white hover:bg-purple-700 px-4 py-2 rounded-md transition"
               >
-                dashboard
+                Dashboard
               </Link>
+              <span className="text-white font-medium">{user && user.name}</span>
               <button
                 onClick={logOutUser}
                 className="bg-white text-purple-600 hover:bg-gray-200 px-4 py-2 rounded-md font-semibold transition"
               >
                 Logout
               </button>
-              <span className="text-white font-medium">{user && user.name}</span>
             </>
           ) : (
             <>
