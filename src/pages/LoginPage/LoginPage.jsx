@@ -31,54 +31,66 @@ function LoginPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-3xl font-bold mb-4">Login</h1>
+    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
+        <h1 className="text-4xl font-bold mb-6 text-center text-purple-700">Login</h1>
 
-      <form onSubmit={handleLoginSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md">
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-            Email:
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="email"
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleEmail}
-            placeholder="Enter your email"
-          />
-        </div>
-        <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-            Password:
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-            id="password"
-            type="password"
-            name="password"
-            value={password}
-            onChange={handlePassword}
-            placeholder="Enter your password"
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Login
-        </button>
-      </form>
+        <form onSubmit={handleLoginSubmit} className="space-y-6">
+          <div>
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="email"
+            >
+              Email:
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:shadow-outline"
+              id="email"
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleEmail}
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div>
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="password"
+            >
+              Password:
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:shadow-outline"
+              id="password"
+              type="password"
+              name="password"
+              value={password}
+              onChange={handlePassword}
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+          >
+            Login
+          </button>
+        </form>
 
-      {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+        {errorMessage && (
+          <p className="text-red-500 mt-4 text-center">{errorMessage}</p>
+        )}
 
-      {/* <p>
-        Don't have an account yet?{" "}
-        <Link to={"/signup"} className="font-bold text-blue-500 hover:text-blue-700">
-          Sign Up
-        </Link>
-      </p> */}
+        <p className="mt-6 text-center text-gray-600">
+          Don't have an account?{" "}
+          <Link to="/signup" className="text-purple-700 hover:text-purple-900">
+            Sign Up
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }

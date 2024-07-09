@@ -4,41 +4,50 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
 
 function Navbar() {
-  // Subscribe to the AuthContext to gain access to
-  // the values from AuthContext.Provider's `value` prop
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <nav>
-      <Link to="/">
-        <button>Home</button>
-      </Link>
+    <nav className="bg-purple-600 p-4 shadow-md">
+      <div className="container mx-auto flex justify-between items-center">
+        <Link to="/" className="text-white text-2xl font-bold">
+          Home
+        </Link>
 
-      {isLoggedIn && (
-        <>
-          <button onClick={logOutUser}>Logout</button>
-
-          <Link to="/profile">
-            <button>Profile</button>
-            {/* <img src="https://picsum.photos/id/402/200/300" style={{ width: 50, height: 50, borderRadius: 25}} alt="profile" /> */}
-          </Link>
-
-          <span>{user && user.name}</span>
-        </>
-      )}
-
-      {!isLoggedIn && (
-        <>
-          <Link to="/signup">
-            {" "}
-            <button>Sign Up</button>{" "}
-          </Link>
-          <Link to="/login">
-            {" "}
-            <button>Login</button>{" "}
-          </Link>
-        </>
-      )}
+        <div className="flex items-center space-x-4">
+          {isLoggedIn ? (
+            <>
+              <Link
+                to="/dashboard"
+                className="text-white hover:bg-purple-700 px-4 py-2 rounded-md transition"
+              >
+                dashboard
+              </Link>
+              <button
+                onClick={logOutUser}
+                className="bg-white text-purple-600 hover:bg-gray-200 px-4 py-2 rounded-md font-semibold transition"
+              >
+                Logout
+              </button>
+              <span className="text-white font-medium">{user && user.name}</span>
+            </>
+          ) : (
+            <>
+              {/* <Link
+                to="/signup"
+                className="bg-white text-purple-600 hover:bg-gray-200 px-4 py-2 rounded-md font-semibold transition"
+              >
+                Sign Up
+              </Link> */}
+              <Link
+                to="/login"
+                className="bg-white text-purple-600 hover:bg-gray-200 px-4 py-2 rounded-md font-semibold transition"
+              >
+                Login
+              </Link>
+            </>
+          )}
+        </div>
+      </div>
     </nav>
   );
 }

@@ -15,7 +15,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      {<IsPrivate><Navbar /></IsPrivate>}
 
       <Routes>
       <Route path="/" element={<HomePage />} />
