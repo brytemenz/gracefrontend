@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -38,11 +40,12 @@ function HomePage() {
         <h1 className="text-5xl md:text-6xl font-bold mb-6">Welcome to the Field of Grace Event</h1>
         <p className="text-lg md:text-2xl p-2 mb-8 bg-purple-600">Join us for an unforgettable experience. Register now to participate!</p>
         <button
-          onClick={handleRegisterClick}
-          className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 mb-8"
-        >
-          Register to Participate
-        </button>
+      onClick={handleRegisterClick}
+      className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 mb-8 flex items-center"
+    >
+      Click to Register
+      <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+    </button>
 
         {countdown.days > 0 && (
           <div className="flex flex-col md:flex-row items-center justify-center mt-8 space-y-4 md:space-y-0 md:space-x-8">
