@@ -35,7 +35,7 @@ function HomePage() {
     <div className="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center" style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/view-soccer-field-with-grass_23-2150887312.jpg?t=st=1720550052~exp=1720553652~hmac=e5fef99d0636c3e8a8f1f0eec771fc03e379832badb5f95bd15a279c93e1ff4f&w=2000)' }}>
       <div className="absolute inset-0 bg-black opacity-60"></div>
       <div className="relative z-10 flex flex-col items-center text-center text-white p-6">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">Welcome to the  <span className="  text-white font-bold py-3 px-8 rounded-full shadow-lg bg-purple-600">Field of Grace</span> Event</h1>
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">Welcome to the  <span className="  text-white font-bold py-3 px-8 rounded-full shadow-lg bg-purple-600">Field </span>of Grace Event</h1>
         <p className="text-lg md:text-2xl mb-8">Join us for an unforgettable experience. Register now to participate!</p>
         <button
           onClick={handleRegisterClick}
