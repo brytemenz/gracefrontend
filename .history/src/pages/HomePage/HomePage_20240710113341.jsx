@@ -34,7 +34,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center" style={{ backgroundImage: 'url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9a145268-41e7-4aa6-93b1-564a57fd6f05/dbki5lx-bc7ebf79-b427-4bb7-b19f-d1cf46b926a1.jpg/v1/fill/w_1024,h_698,q_75,strp/soccer_stadium_by_hz_designs_dbki5lx-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njk4IiwicGF0aCI6IlwvZlwvOWExNDUyNjgtNDFlNy00YWE2LTkzYjEtNTY0YTU3ZmQ2ZjA1XC9kYmtpNWx4LWJjN2ViZjc5LWI0MjctNGJiNy1iMTlmLWQxY2Y0NmI5MjZhMS5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.JWmyDxBn2RMSKNo8_ri8MLbEyraknjoe5rTuY5QYWYc)' }}>
+    <div className="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center" style={{ backgroundImage: 'url(https://fgcuathletics.com/images/2021/5/17/BYP_WsocvUF018_August_10_2018.jpg)' }}>
       <div className="absolute inset-0 bg-black opacity-60"></div>
       <div className="relative z-10 flex flex-col items-center text-center text-white p-6">
         <h1 className="text-5xl md:text-6xl font-bold mb-6">Welcome to the Field of Grace Event</h1>
