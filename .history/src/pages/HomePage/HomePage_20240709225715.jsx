@@ -50,24 +50,24 @@ function HomePage() {
         {countdown.days > 0 && (
           <div className="flex flex-col md:flex-row items-center justify-center mt-8 space-y-4 md:space-y-0 md:space-x-8">
             <div className="bg-purple-800 bg-opacity-60 rounded-lg p-4 text-center">
-              <FontAwesomeIcon icon={faCalendarDay} className="text-3xl md:text-4xl text-white mb-2" />
-              <div className="text-xl md:text-2xl text-white font-semibold mb-2">Days</div>
-              <div className="text-3xl md:text-5xl text-white font-bold">{countdown.days}</div>
+              <FontAwesomeIcon icon={faCalendarDay} className="text-4xl md:text-5xl text-white mb-2" />
+              <div className="text-2xl md:text-3xl text-white font-semibold mb-2">Days</div>
+              <div className="text-4xl md:text-6xl text-white font-bold">{countdown.days}</div>
             </div>
             <div className="bg-purple-800 bg-opacity-60 rounded-lg p-4 text-center">
-              <FontAwesomeIcon icon={faClock} className="text-3xl md:text-4xl text-white mb-2" />
-              <div className="text-xl md:text-2xl text-white font-semibold mb-2">Hours</div>
-              <div className="text-3xl md:text-5xl text-white font-bold">{countdown.hours}</div>
+              <FontAwesomeIcon icon={faClock} className="text-4xl md:text-5xl text-white mb-2" />
+              <div className="text-2xl md:text-3xl text-white font-semibold mb-2">Hours</div>
+              <div className="text-4xl md:text-6xl text-white font-bold">{countdown.hours}</div>
             </div>
             <div className="bg-purple-800 bg-opacity-60 rounded-lg p-4 text-center">
-              <FontAwesomeIcon icon={faHourglassHalf} className="text-3xl md:text-4xl text-white mb-2" />
-              <div className="text-xl md:text-2xl text-white font-semibold mb-2">Minutes</div>
-              <div className="text-3xl md:text-5xl text-white font-bold">{countdown.minutes}</div>
+              <FontAwesomeIcon icon={faHourglassHalf} className="text-4xl md:text-5xl text-white mb-2" />
+              <div className="text-2xl md:text-3xl text-white font-semibold mb-2">Minutes</div>
+              <div className="text-4xl md:text-6xl text-white font-bold">{countdown.minutes}</div>
             </div>
             <div className="bg-purple-800 bg-opacity-60 rounded-lg p-4 text-center">
-              <FontAwesomeIcon icon={faStopwatch} className="text-3xl md:text-4xl text-white mb-2" />
-              <div className="text-xl md:text-2xl text-white font-semibold mb-2">Seconds</div>
-              <div className="text-3xl md:text-5xl text-white font-bold">{countdown.seconds}</div>
+              <FontAwesomeIcon icon={faStopwatch} className="text-4xl md:text-5xl text-white mb-2" />
+              <div className="text-2xl md:text-3xl text-white font-semibold mb-2">Seconds</div>
+              <div className="text-4xl md:text-6xl text-white font-bold">{countdown.seconds}</div>
             </div>
           </div>
         )}

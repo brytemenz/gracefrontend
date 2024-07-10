@@ -55,7 +55,7 @@ const RegisterAttendee = () => {
       </div>
 
       {/* Right side with form */}
-      <div className="bg-gray-100 p-8 rounded-r-md shadow-lg w-full md:w-1/2">
+      <div className=" p-8 rounded-r-md shadow-lg w-full md:w-1/2">
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Register</h2>
         {message && <p className="mb-4 text-center text-red-500">{message}</p>}
         <form onSubmit={handleSubmit}>
