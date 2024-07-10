@@ -122,11 +122,11 @@ function HomePage() {
             </div>
             <div className="mb-4 md:mb-0 flex items-center">
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
-              <span>+233 (0)5941 91084</span>
+              <span>+123-456-7890</span>
             </div>
             <div className="flex items-center">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
-              <span>Accra, Ghana</span>
+              <span>123 Grace St, City, Country</span>
             </div>
           </div>
         </div>

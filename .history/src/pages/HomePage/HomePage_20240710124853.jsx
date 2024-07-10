@@ -122,7 +122,7 @@ function HomePage() {
             </div>
             <div className="mb-4 md:mb-0 flex items-center">
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
-              <span>+233 (0)5941 91084</span>
+              <span>+233 (0)594191084</span>
             </div>
             <div className="flex items-center">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />

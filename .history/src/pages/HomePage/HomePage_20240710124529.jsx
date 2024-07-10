@@ -112,25 +112,6 @@ function HomePage() {
 
       
     </div>
-    <footer className="relative w-full bg-purple-800 bg-opacity-80 text-white py-6 ">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl font-bold mb-4">Fore more information Contact us:</h2>
-          <div className="flex flex-col md:flex-row justify-center items-center md:space-x-12">
-            <div className="mb-4 md:mb-0 flex items-center">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-              <a href="mailto:info@phronesisministry.org">phronesisministry.gh@gmail.com</a>
-            </div>
-            <div className="mb-4 md:mb-0 flex items-center">
-              <FontAwesomeIcon icon={faPhone} className="mr-2" />
-              <span>+233 (0)5941 91084</span>
-            </div>
-            <div className="flex items-center">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
-              <span>Accra, Ghana</span>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
